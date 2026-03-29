@@ -143,7 +143,7 @@ function App() {
     if (!question.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/ask', { question });
+      const res = await axios.post('https://rue-project.onrender.com/api/ask', { question });
       const { answer_text, concepts, usage } = res.data;
       
       const newNode = {
@@ -172,7 +172,7 @@ function App() {
     if (!currentNode) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/explain', { 
+      const res = await axios.post('https://rue-project.onrender.com/api/explain', { 
         term, 
         contextQuestion: history[0]?.content, 
         depth: currentNode.depth + 1 
