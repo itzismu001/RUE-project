@@ -261,7 +261,17 @@ function App() {
       <motion.div initial={{ y: -50 }} animate={{ y: 0 }} style={{ padding: '16px 24px', background: theme.panelBg, borderBottom: `1px solid ${theme.borderColor}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 10, boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ fontSize: '24px' }}>🧠</div>
-          <h1 style={{ margin: 0, fontSize: '20px', fontWeight: '700', letterSpacing: '-0.5px' }}>Recursive Understanding Engine</h1>
+          <h1 style={{ 
+  margin: 0, 
+  fontSize: '20px', 
+  fontWeight: '800', 
+  letterSpacing: '-0.5px',
+  background: 'linear-gradient(90deg, #3b82f6, #8b5cf6)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent'
+}}>
+  DeepLearn Navigator
+</h1>
         </div>
         <div style={{ display: 'flex', gap: '12px' }}>
           <motion.button onClick={() => setZenMode(!zenMode)} whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }} style={{ padding: '8px 16px', background: zenMode ? '#8b5cf6' : 'transparent', border: `1px solid ${zenMode ? '#8b5cf6' : theme.borderColor}`, borderRadius: '8px', cursor: 'pointer', color: zenMode ? 'white' : theme.textMain, fontWeight: '500', transition: 'all 0.3s ease' }}>
